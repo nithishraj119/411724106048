@@ -1,0 +1,268 @@
+/* --- ROLL NUMBER CONFIGURATION --- */
+
+:root {
+
+/* 1) For background color (Choose one based on your roll number):
+
+0-3: #2563eb (Blue) | 4-6: #16a34a (Green) | 7-9: #7c3aed (Purple) */
+
+--bg-color: purple; 
+
+
+/* 2) For image border-radius (Choose one):
+
+Even: 50px | Odd: 20px */
+
+--img-radius: 50px; 
+
+}
+
+
+/* Base Global Styles */
+
+body {
+
+font-family: system-ui, -apple-system, sans-serif;
+
+margin: 0;
+
+padding: 20px;
+
+background-color: #f8fafc;
+
+color: #334155;
+
+display: flex;
+
+flex-direction: column;
+
+gap: 30px;
+
+align-items: center;
+
+}
+
+
+h1 {
+
+margin: 10px 0;
+
+color: #1e293b;
+
+}
+
+
+/* 1) Navigation Bar (Mobile-First) */
+
+nav {
+
+width: 100%;
+
+display: flex;
+
+flex-direction: column; /* Vertical layout on mobile */
+
+gap: 15px;
+
+background-color: #ffffff;
+
+padding: 15px;
+
+box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+
+border-radius: 8px;
+
+text-align: center;
+
+box-sizing: border-box;
+
+}
+
+
+nav a {
+
+text-decoration: none;
+
+color: #475569;
+
+font-weight: 600;
+
+transition: color 0.2s;
+
+}
+
+
+nav a:hover {
+
+color: var(--bg-color);
+
+}
+
+
+/* 3) Image with Rounded Edges */
+
+img {
+
+width: 100%;
+
+max-width: 400px;
+
+height: auto;
+
+border-radius: 20px;
+
+object-fit: cover;
+
+}
+
+
+/* 4 & 7) Video Styling */
+
+video {
+
+width: 50vw; /* Half device width */
+
+padding: 15px; /* Padding for video */
+
+background-color: var(--bg-color); /* Same bg color as button */
+
+border-radius: 8px;
+
+box-sizing: border-box;
+
+}
+
+
+/* 5) Table Styling */
+
+table {
+
+border-collapse: collapse;
+
+width: 100%;
+
+max-width: 500px;
+
+margin: 10px 0;
+
+background: white;
+
+box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+
+border-radius: 8px;
+
+overflow: hidden;
+
+}
+
+
+th, td {
+
+border: 1px solid purple;
+
+padding: 12px;
+
+text-align: left;
+
+}
+
+
+th {
+
+background-color: #f1f5f9;
+
+color: #1e293b;
+
+font-weight: bold;
+
+}
+
+
+button {
+
+border: none; /* No border */
+
+padding: 12px 24px; /* Padding */
+
+margin: 20px; /* Margin for button */
+
+background-color: var(--bg-color); /* Same bg color as video */
+
+color: white;
+
+font-size: 16px;
+
+font-weight: 600;
+
+border-radius: 6px;
+
+cursor: pointer;
+
+transition: opacity 0.2s, transform 0.1s;
+
+}
+
+
+button:hover {
+
+opacity: 0.9;
+
+transform: scale(1.02);
+
+}
+
+
+.grid-container {
+
+display: grid;
+
+width: 100%;
+
+max-width: 1000px;
+
+gap: 15px;
+
+grid-template-columns: repeat(2, 1fr); 
+
+}
+
+
+.grid-item {
+
+background-color: #ffffff;
+
+padding: 20px;
+
+text-align: center;
+
+font-weight: bold;
+
+border: 1px solid #e2e8f0;
+
+border-radius: 6px;
+
+box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+
+}
+
+
+@media (min-width: 768px) {
+
+nav {
+
+flex-direction: row;
+
+justify-content: center;
+
+gap: 40px; 
+
+}
+
+
+.grid-container {
+
+grid-template-columns: repeat(4, 1fr);
+
+}
+
+}
